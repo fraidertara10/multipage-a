@@ -1,0 +1,11 @@
+---
+export function getStaticPaths() {
+  return [
+    {params: {newsTitle: 'clifford'}},
+    {params: {newsTitle: 'rover'}},
+    {params: {newsTitle: 'spot'}},
+  ];
+}
+const { newsTitle } =Astro.params;
+---
+ Hola esta noticia se { newsTitle }

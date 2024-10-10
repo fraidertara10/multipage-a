@@ -1,9 +1,7 @@
 ---
-interface Props {
-	title: string;
-}
 
 const { title } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -17,34 +15,25 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<header class="bg-orange-400 h-20">
+		
+		</header>
+		<menu class="flex justify-around bg-slate-300 ">
+			<li>
+				<a href="/" class="hover:bg-white/30  px-4  block ">Inicio</a>
+			</li>
+			<li>
+				<a href="/quienes-somos" class="hover:bg-white/30   px-4 block">quienes somos</a>
+			</li>
+			<li>
+				<a href="/contactanos" class="hover:bg-white/30  px-4  block">Contactanos</a>
+			</li>
+			<li>
+				<a href="/organigrama/biografia" class="hover:bg-white/30  px-4  block">oraganigrama</a>
+			</li>
+			
+		</menu>
 		<slot />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
+
