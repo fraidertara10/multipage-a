@@ -1,29 +1,22 @@
 ---
+import { Icon } from 'astro-icon/components'
 import Layout from "../layouts/Layout.astro";
 ---
  <Layout>
-    <div class=" h-screen w-96 m-auto pt-20 ">
-        <h1 class="text-3xl font-bold text-center mb-6">Contacto</h1>
+<div class="flex space-x-3">
+    <p>Formulario de contacto</p>
+    <div class="flex bg-red-500 px-2 rounded-lg items-center text-white">
+        <Icon name="left-arrow"/>
+        <a href=""> boton 1</a>
+       
+    </div>
+  
+  <a href="" class="px-2 bg-blue-600 rounded-lg text-white">Enviar</a>
+</div>
         
-        <form action="#" method="POST" class="bg-gradient-to-b from-blue-600 to-blue-300 shadow-md rounded-lg p-8">
-            <div class="mb-4">
-                <label for="name" class="block text-gray-700">Nombre</label>
-                <input type="text" id="name" name="name" required class="mt-1 p-2 border border-gray-300 rounded w-full">
-            </div>
-
-            <div class="mb-4">
-                <label for="email" class="block text-gray-700">Correo Electrónico</label>
-                <input type="email" id="email" name="email" required class="mt-1 p-2 border border-gray-300 rounded w-full">
-            </div>
-
-            <div class="mb-4">
-                <label for="message" class="block text-gray-700">Mensaje</label>
-                <textarea id="message" name="message" required class="mt-1 p-2 border border-gray-300 rounded w-full" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
-                Enviar
-            </button>
-        </form>
+        <Icon name="search" size="80" class="text-green-500" />
+        <Icon name="mdi:brightness-5" size="80" class="text-blue-600"/>
+        <Icon name="svg-spinners:blocks-shuffle-3" size="80"  class="text-green-500"/>
+        <Icon name="unjs:consola"  size="80"  />
     </div>
  </Layout>
